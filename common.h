@@ -4,6 +4,6 @@
 #include <iostream>
 using namespace std;
 
-#define STACK_MAX 500
+#define STACK_MAX 500  // 스택 배열의 크기 
 
-#endif  // COMMON_H
+#endif  // __COMMON_H__

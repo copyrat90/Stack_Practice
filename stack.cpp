@@ -11,7 +11,7 @@ bool Stack::push(char c)
 {
 	if (top >= 500)
 	{
-		cout << "Stack is full" << endl;
+		// cout << "push error : Stack is full" << endl;
 		return false;
 	}
 	
@@ -24,9 +24,21 @@ char Stack::pop()
 {
 	if (this->empty())
 	{
-		cout << "Stack is empty" << endl;
+		// cout << "pop error : Stack is empty" << endl;
 		return '\0';
 	}
 	
-	
+	return data_arr[top--];
+}
+
+
+bool Stack::empty()
+{
+	return (top < 0);
+}
+
+
+void Stack::clear()
+{
+	top = -1;
 }
