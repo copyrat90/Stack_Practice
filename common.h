@@ -1,6 +1,8 @@
 #ifndef __COMMON_H__
 #define __COMMON_H__
 
+// #define __DEBUG_MODE__
+
 #include <iostream>
 using namespace std;
 

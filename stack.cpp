@@ -9,9 +9,11 @@ Stack::Stack() : top(-1)
 
 bool Stack::push(char c)
 {
-	if (top >= 500)
+	if (top >= STACK_MAX - 1)
 	{
-		// cout << "push error : Stack is full" << endl;
+#ifdef __DEBUG_MODE__
+		cout << "push error : Stack is full" << endl;
+#endif
 		return false;
 	}
 	
@@ -24,7 +26,9 @@ char Stack::pop()
 {
 	if (this->empty())
 	{
-		// cout << "pop error : Stack is empty" << endl;
+#ifdef __DEBUG_MODE__
+		cout << "pop error : Stack is empty" << endl;
+#endif
 		return '\0';
 	}
 	
